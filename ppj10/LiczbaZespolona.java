@@ -23,8 +23,17 @@ public class LiczbaZespolona {
 
     }
 
-    public void odejmij(LiczbaZespolona liczba) {
+    public LiczbaZespolona odejmij(LiczbaZespolona liczba) {
+        this.wyswietl();
+        System.out.print(" - ");
+        liczba.wyswietl();
+        System.out.print(" = ");
 
+        LiczbaZespolona tmp;
+        tmp = new LiczbaZespolona(this.rzeczywista -
+            liczba.rzeczywista, this.urojona - liczba.urojona);
+        tmp.wyswietlln();
+        return tmp;
     }
 
     public void pomnoz(LiczbaZespolona liczba) {

@@ -52,11 +52,14 @@ class Ppj10 {
         liczba5.wyswietlln();
 
         System.out.println("Dodawanie");
-        // liczba1.wyswietl();
         liczba1 = liczba1.dodaj(liczba5);
-        
+        liczba2 = liczba2.dodaj(liczba4);
+        liczba3 = liczba3.dodaj(liczba5);
 
         System.out.println("Odejmowanie");
+        liczba4 = liczba4.odejmij(liczba2);
+        liczba5 = liczba5.odejmij(liczba1);
+        liczba3 = liczba3.odejmij(liczba4);
 
         System.out.println("Mnozenie");
 
