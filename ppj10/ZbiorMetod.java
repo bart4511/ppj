@@ -1,4 +1,4 @@
-class ZbiorMetod {
+public class ZbiorMetod {
     void ustalWartosc(int x) {
         System.out.println("int = " + x);
         x++;

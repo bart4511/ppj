@@ -1,4 +1,4 @@
-class Liczba {
+public class Liczba {
     int x;
 
     void przypiszWartosc(int x) {

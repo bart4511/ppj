@@ -39,6 +39,28 @@ class Ppj10 {
 
         // Zadanie V
         System.out.println("\nZadanie V\n");
+        LiczbaZespolona liczba1 = new LiczbaZespolona(1, 2);
+        LiczbaZespolona liczba2 = new LiczbaZespolona(0, 5);
+        LiczbaZespolona liczba3 = new LiczbaZespolona(6, 1);
+        LiczbaZespolona liczba4 = new LiczbaZespolona(7, 8);
+        LiczbaZespolona liczba5 = new LiczbaZespolona(4, 9);
+
+        liczba1.wyswietlln();
+        liczba2.wyswietlln();
+        liczba3.wyswietlln();
+        liczba4.wyswietlln();
+        liczba5.wyswietlln();
+
+        System.out.println("Dodawanie");
+        // liczba1.wyswietl();
+        liczba1 = liczba1.dodaj(liczba5);
+        
+
+        System.out.println("Odejmowanie");
+
+        System.out.println("Mnozenie");
+
+        System.out.println("Zwiekszenie czesci rzeczywistej o 1");
 
     }
 }
