@@ -62,8 +62,14 @@ class Ppj10 {
         liczba3 = liczba3.odejmij(liczba4);
 
         System.out.println("Mnozenie");
+        liczba1 = liczba1.pomnoz(liczba2);
+        liczba3 = liczba3.pomnoz(liczba5);
+        liczba4 = liczba4.pomnoz(liczba1);
 
         System.out.println("Zwiekszenie czesci rzeczywistej o 1");
+        liczba1 = liczba1.zwieksz();
+        liczba3 = liczba3.zwieksz();
+        liczba4 = liczba4.zwieksz();
 
     }
 }

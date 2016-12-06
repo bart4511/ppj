@@ -36,13 +36,31 @@ public class LiczbaZespolona {
         return tmp;
     }
 
-    public void pomnoz(LiczbaZespolona liczba) {
-        // LiczbaZespolona tmp = new
-        // (this.rzeczywista * liczba.rzeczywista - this.urojona * liczba.urojona)
+    public LiczbaZespolona pomnoz(LiczbaZespolona liczba) {
+        // mnozenie (ac - bd) + i(ad + bc)
+        // a = this.rzeczywista
+        // b = this.urojona
+        // c = liczba.rzeczywista
+        // d = liczba.urojona
+        this.wyswietl();
+        System.out.print(" * ");
+        liczba.wyswietl();
+        System.out.print(" = ");
+
+        LiczbaZespolona tmp;
+        tmp = new LiczbaZespolona(this.rzeczywista * liczba.rzeczywista -
+            this.urojona * liczba.urojona,
+            this.rzeczywista * liczba.urojona +
+            this.urojona * liczba.rzeczywista);
+        tmp.wyswietlln();
+        return tmp;
     }
 
     public LiczbaZespolona zwieksz() {
-        this.rzeczywista++;
+        this.wyswietl();
+        System.out.print(" +  1i = ");
+        this.urojona++;
+        this.wyswietlln();
         return this;
     }
 
