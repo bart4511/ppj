@@ -23,6 +23,18 @@ class Ppj08 {
         }
     }
 
+    public static int Fibonacci(int x) {
+        if(x == 0) {
+            return 0;
+        } else if(x == 1) {
+            return 1;
+        } else if(x == 2) {
+            return 1;
+        } else {
+            return Fibonacci(x - 2) + Fibonacci(x - 1);
+        }
+    }
+
     public static void main(String[] args) {
         // Zadanie I
         System.out.println("\nZadanie I\n");
@@ -73,6 +85,13 @@ class Ppj08 {
 
         // Zadanie IX
         System.out.println("\nZadanie IX\n");
+
+        System.out.println("Fibonacci(0) = " + Fibonacci(0));
+        System.out.println("Fibonacci(2) = " + Fibonacci(2));
+        System.out.println("Fibonacci(8) = " + Fibonacci(8));
+        System.out.println("Fibonacci(12) = " + Fibonacci(12));
+        System.out.println("Fibonacci(15) = " + Fibonacci(15));
+        System.out.println("Fibonacci(19) = " + Fibonacci(19));
 
         // Zadanie X
         System.out.println("\nZadanie X\n");
