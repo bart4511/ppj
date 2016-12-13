@@ -35,6 +35,10 @@ class Ppj08 {
         }
     }
 
+    public static void permutation(char[] tab) {
+
+    }
+
     public static void main(String[] args) {
         // Zadanie I
         System.out.println("\nZadanie I\n");
