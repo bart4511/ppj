@@ -4,102 +4,94 @@ public class Ppj05 {
 	public static void main(String[] args) {
 		// Zadanie I
 		System.out.println("Zadanie I\n");
-		{
-			for(int i = 0; i <= 100; i++) {
-				if(i % 2 == 0) {
-					System.out.print(i + ",");
-				}
-			}
+		boolean czyPada = true;
+		boolean czySwieciSlonce = true;
+
+		if(czyPada) {
+			if(czySwieciSlonce)
+				System.out.println("Tecza");
+			else
+				System.out.println("Plucha");
+		} else {
+			if(czySwieciSlonce)
+				System.out.println("Slonecznie");
+			else
+				System.out.println("Pochmurno");
 		}
-		System.out.println();
 
 		// Zadanie II
 		System.out.println("\nZadanie II\n");
-		{
-			int s = 0;
-//			for(int i = 1; i <= 10; i++) {
-//				s = s + i;
-//			}
-			int i = 1;
-			while(i <= 10) {
-				s = s + i;
-				i++;
-				System.out.println(i + ".\t" + s);
-			}
-		}
+		int zmienna;
+		if(czyPada)
+			zmienna = 5;
+		else
+			zmienna = 8;
+
 		// Zadanie III
 		System.out.println("\nZadanie III\n");
-		{
-			double suma = 0;
-			for(int i = 0; i < 10; i++) {
-				suma += (1 / (Math.pow(2, i)));
-				System.out.println((i + 1) + ".\t" + suma);
-			}
+		char znak = 'B';
+		System.out.print("Wartosc znaku to: ");
+		if(znak <= 9) {
+			System.out.println(znak);
+		} else if (znak == 'A' || znak == 'a') {
+			System.out.println(10);
+		} else if (znak == 'B' || znak == 'b') {
+			System.out.println(11);
+		} else if (znak == 'C' || znak == 'c') {
+			System.out.println(12);
+		} else if (znak == 'D' || znak == 'd') {
+			System.out.println(13);
+		} else if (znak == 'E' || znak == 'e') {
+			System.out.println(14);
+		} else if (znak == 'F' || znak == 'f') {
+			System.out.println(15);
 		}
-
 
 		// Zadanie IV
 		System.out.println("\nZadanie IV\n");
-		{
-			for(int i = 1; i <= 10; i++) {
-				for(int j = 1; j <= 10; j++) {
-					System.out.print("\t" + i * j);
-				}
-				System.out.println();
-			}
+		for(int i = 0; i <= 100; i++) {
+			if(i == 0)
+				continue;
+			if(i % 2 == 0)
+				System.out.print(i + ", ");
 		}
 
 		// Zadanie V
 		System.out.println("\nZadanie V\n");
 		{
-			int i = 0;
-			int liczba = 0;
-			String liczbyPierwsze = "1 ";
-			for (i = 0; i < 100; i++) {
-				int ileDzielnikow = 0;
-				for (liczba = i; liczba >= 1; liczba--) {
-					if (i % liczba == 0) {
-						ileDzielnikow += 1;
-					}
-				}
-				if (ileDzielnikow == 2) {
-					liczbyPierwsze = liczbyPierwsze + i + " ";
-				}
+			int s = 0;
+			// for(int i = 1; i <= 10; i++)
+			//  	s = s + i;
+			int i = 1;
+			while(i <= 10) {
+				s += i;
+				i++;
 			}
-			System.out.println("Liczby pierwsze to:");
-			System.out.println(liczbyPierwsze);
-
 		}
 
 		// Zadanie VI
 		System.out.println("\nZadanie VI\n");
 		{
-			int ileSpacji = 0;
-			int ileGwiazdek = 9;
-			int kierunek = -2;
-
-			for (int i = 0; i < 9; i++) {
-				String wiersz = "";
-				for(int j = 0; j < ileSpacji; j++) {
-					wiersz += " ";
-				}
-				for(int k = 0; k < ileGwiazdek; k++) {
-					wiersz += "*";
-				}
-				for(int l = 0; l < ileSpacji; l++) {
-					wiersz += " ";
-				}
-
-				System.out.println(wiersz);
-
-				ileGwiazdek += kierunek;
-				ileSpacji -= (kierunek/2);
-				if(ileGwiazdek == 1) kierunek = -kierunek;
-
+			for(double i = 0; i < 10; i++) {
+				System.out.println(1/Math.pow(2.0, i));
 			}
-			//
 		}
 
+		// Zadanie VII
+		System.out.println("\nZadanie VII\n");
+		int counter = 0;
+		int number = 2;
+		while(counter != 10) {
+			int x = 1;
+			if(number % x != 0)
+				x += 1;
+			else if(number == x) {
+				System.out.println(number + " - liczba pierwsza");
+				counter += 1;
+			} else {
+				number += 1;
+			}
+		}
 	}
 
 }
