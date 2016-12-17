@@ -83,13 +83,9 @@ public class Ppj05 {
 		int liczba = 2;
 		while(licznik != 10) {
 			int x = 2;
-
-			// if(liczba % x != 0)
-			// 	x += 1;
 			while(liczba % x != 0) {
 				x += 1;
 			}
-
 			if(liczba == x) {
 				System.out.println(liczba + " - liczba pierwsza");
 				licznik += 1;
