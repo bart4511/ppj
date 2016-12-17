@@ -79,19 +79,22 @@ public class Ppj05 {
 
 		// Zadanie VII
 		System.out.println("\nZadanie VII\n");
-		int counter = 0;
-		int number = 2;
-		while(counter != 10) {
-			int x = 1;
-			if(number % x != 0)
+		int licznik = 0;
+		int liczba = 2;
+		while(licznik != 10) {
+			int x = 2;
+
+			// if(liczba % x != 0)
+			// 	x += 1;
+			while(liczba % x != 0) {
 				x += 1;
-			else if(number == x) {
-				System.out.println(number + " - liczba pierwsza");
-				counter += 1;
-			} else {
-				number += 1;
 			}
+
+			if(liczba == x) {
+				System.out.println(liczba + " - liczba pierwsza");
+				licznik += 1;
+			}
+			liczba += 1;
 		}
 	}
-
 }
