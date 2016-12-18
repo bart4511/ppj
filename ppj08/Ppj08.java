@@ -38,8 +38,16 @@ class Ppj08 {
 		System.out.println();
 	}
 
+    public static void printTable(char[][] table) {
+        for (int i = 0; i < table.length; i++) {
+            for (int j = 0; j < table[i].length; j++) {
+                System.out.print(table[i][j] + "\t");
+            }
+            System.out.println();
+        }
+    }
+
 	public static boolean czyDwaZnaki(char[] table) {
-//		boolean czyDwie = false;
 		for (int i = 0; i < table.length; i++) {
 			int count = 0;
 			for (int j = i + 1; j < table.length; j++) {
@@ -48,30 +56,33 @@ class Ppj08 {
 			}
 			if (count >= 2)
 				return true;
-//			else
-//				czyDwie = false;
 		}
 
 		return false;
 	}
 
 	public static boolean czyDwieLitery(char[] table) {
-//		boolean czyDwie = false;
 		for (int i = 0; i < table.length; i++) {
 			int count = 0;
 			for (int j = i + 1; j < table.length; j++) {
 				if (Character.compare(table[i], table[j]) == 0)
 					count++;
-//				System.out.println(count);
 			}
 			if (count >= 2)
 				return true;
-//			else
-//				czyDwie = false;
 		}
 
 		return false;
 	}
+
+    public static void zamien(char[][] tablica,
+                              int fromX, int fromY,
+                              int toX, int toY) {
+        char tmp;
+        tmp = tablica[fromX][fromY];
+        tablica[fromX][fromY] = tablica[toX][toY];
+        tablica[toX][toY] = tmp;
+    }
 
     public static void myMethod(int x) {
         x += 1;
@@ -163,6 +174,7 @@ class Ppj08 {
 		}
 
 		// Zadanie III
+        // TODO: III zadanie z powtarzajacymi sie literami
 		System.out.println("\nZadanie III\n");
 		{
 			char[][] tab = {
@@ -187,9 +199,11 @@ class Ppj08 {
 		}
 
         // Zadanie IV
+        // TODO: IV
         System.out.println("\nZadanie IV\n");
 
         // Zadanie V
+        // TODO: V
         System.out.println("\nZadanie V\n");
 
         // Zadanie VI
@@ -206,8 +220,39 @@ class Ppj08 {
         };
         int pozycjaX = 0 , pozycjaY = 0 ;
 
+        while(pozycjaY + 1 < tab[pozycjaX].length) {
+            zamien(tab, pozycjaX, pozycjaY, pozycjaX, pozycjaY + 1);
+            pozycjaY++;
+        }
+        while(pozycjaX + 1 < tab.length) {
+            zamien(tab, pozycjaX, pozycjaY, pozycjaX + 1, pozycjaY);
+            pozycjaX++;
+        }
+        while(pozycjaY - 1 >= 0) {
+            zamien(tab, pozycjaX, pozycjaY, pozycjaX, pozycjaY - 1);
+            pozycjaY--;
+        }
+        while(tab[pozycjaX - 1][pozycjaY] != 'x') {
+            zamien(tab, pozycjaX, pozycjaY, pozycjaX - 1, pozycjaY);
+            pozycjaX--;
+        }
+        while(tab[pozycjaX][pozycjaY + 1] != 'x') {
+            zamien(tab, pozycjaX, pozycjaY, pozycjaX, pozycjaY + 1);
+            pozycjaY++;
+        }
+        while(tab[pozycjaX + 1][pozycjaY] != 'x') {
+            zamien(tab, pozycjaX, pozycjaY, pozycjaX + 1, pozycjaY);
+            pozycjaX++;
+        }
+        while(tab[pozycjaX][pozycjaY - 1] != 'e') {
+            zamien(tab, pozycjaX, pozycjaY, pozycjaX, pozycjaY - 1);
+            pozycjaY--;
+        }
+
+        printTable(tab);
 
         // Zadanie VII
+        // TODO: VII zmienna char?
         System.out.println("\nZadanie VII\n");
 
         int xInt = 5;
