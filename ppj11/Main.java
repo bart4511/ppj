@@ -1,4 +1,4 @@
-package com.company;
+package ppj11;
 
 public class Main {
 
